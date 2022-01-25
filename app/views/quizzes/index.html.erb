@@ -1,0 +1,12 @@
+<h1>Quiz page</h1>
+<p>Select the quiz below you want to complete.</p>
+
+<ul>
+  <% @quizzes.each do |quiz| %>
+    <li>
+      <%= link_to quiz.name, quiz %>
+    </li>
+  <% end %>
+</ul>
+
+<p>Click here to add a quiz<p>

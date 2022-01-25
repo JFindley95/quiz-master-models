@@ -1,0 +1,9 @@
+<% @questions.each do |q| %>
+<form action="/action_page.php">
+  <p><%=q.question%></p>
+  <% q.choices.split(",").each do |choice| %>
+  <input type="radio" id="quiz" name="quiz" value="<%=choice%>">
+  <label for="<%=choice%>"><%=choice%></label><br>
+<% end %>
+  <br>
+<% end %>
